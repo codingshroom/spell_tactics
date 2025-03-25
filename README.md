@@ -1,14 +1,18 @@
 this is a card game called spell tactics. 
 
 it is about joy. 
+
 the joy to outplay and the joy to be outplayed. 
+
 it is about the appreciation of great turns and the thrilling moment of uncertainty just before the reveal of combat outcome. 
 
 
 we get right into it:
 
 this is a two player game, you both start with 13 health. 
+
 your goal is to bring your opponent's health down to zero while being above zero health yourself. 
+
 both players each have a deck with 6 cards, discard pile, hand, and a playing zone with three different fields. 
 
 
@@ -35,9 +39,13 @@ this is the game's structure:
         )
     
 you always play cards face down - simultaneously with your opponent. 
+
 you can choose to play them either direct or charged. 
+
 cards played directly will be revealed and calculated in the current round. 
+
 charged cards will be revealed in the following round - until then the field the card is placed in is occupied and no other card can be played onto this field. 
+
 the effect of charged cards are stronger and more consequential. 
 
 to be continued...
