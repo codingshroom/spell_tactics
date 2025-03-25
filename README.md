@@ -1,19 +1,20 @@
-this is a card game called spell tactics. 
+this is a card game called spell tactics
 
-it is about joy. 
 
-the joy to outplay and the joy to be outplayed. 
+it is about joy
 
-it is about the appreciation of great turns and the thrilling moment of uncertainty just before the reveal of combat outcome. 
+the joy to outplay and the joy to be outplayed
+
+it is about the appreciation of great turns and the thrilling moment of uncertainty just before the reveal of combat outcome
 
 
 we get right into it:
 
-this is a two player game, you both start with 13 health. 
+this is a two player game, you both start with 13 health
 
-your goal is to bring your opponent's health down to zero while being above zero health yourself. 
+your goal is to bring your opponent's health down to zero while being above zero health yourself
 
-both players each have a deck with 6 cards, discard pile, hand, and a playing zone with three different fields. 
+both players each have a deck with 6 cards, discard pile, hand, and a playing zone with three different fields
 
 
 each of those three fields has a different effect if you place a card in it:
@@ -37,15 +38,17 @@ this is the game's structure:
             draw phase and shuffling
             )
         )
-    
-you always play cards face down - simultaneously with your opponent. 
 
-you can choose to play them either direct or charged. 
 
-cards played directly will be revealed and calculated in the current round. 
+you always play cards face down - simultaneously with your opponent
 
-charged cards will be revealed in the following round - until then the field the card is placed in is occupied and no other card can be played onto this field. 
+you can choose to play them either direct or charged
 
-the effect of charged cards are stronger and more consequential. 
+cards played directly will be revealed and calculated in the current round
+
+charged cards will be revealed in the following round - until then the field the card is placed in is occupied and no other card can be played onto this field
+
+the effect of charged cards are stronger and more consequential
+
 
 to be continued...
