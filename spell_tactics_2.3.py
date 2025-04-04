@@ -55,9 +55,9 @@ class Game:
     def __init__(self):
         self.round = 0
 
-    @staticmethod
-    def overview(moment, player_1, player_2, game_round):
-        print(f"\n\n---------- round: {game_round} ---------- {moment} ----------\n")
+
+    def overview(self, moment, player_1, player_2):
+        print(f"\n\n---------- round: {self.round} ---------- {moment} ----------\n")
 
         zones_dict_1 = {"deck": player_1.deck, "hand": player_1.hand, "attack": player_1.fields["attack"], "block": player_1.fields["block"],
                         "draw": player_1.fields["draw"], "discard": player_1.discard}
@@ -381,7 +381,7 @@ def main():
     game = Game()
     p1 = Player("ONE", BASIC_DECK)
     p2 = Player("22222222", BASIC_DECK)
-    game.overview("game start", p1, p2, game.round)
+    game.overview("game start", p1, p2)
 
     player_list = [p1, p2]
     action_list = ["attack", "block", "draw"]
@@ -393,15 +393,15 @@ def main():
         game.round += 1
 
         for action in action_list:  # letting both players choose for each action before going to the next action
-            game.overview(f"play phase: {action}", p1, p2, game.round)
+            game.overview(f"play phase: {action}", p1, p2)
             for player in player_list:
                 player.play_card(action, game.round)
 
-        game.overview("end of actions", p1, p2, game.round)
+        game.overview("end of actions", p1, p2)
         p1.health, p2.health = full_combat_calc(p1.fields["attack"], p2.fields["block"], p1.health, p2.health, game.round)
         p2.health, p1.health = full_combat_calc(p2.fields["attack"], p1.fields["block"], p2.health, p1.health, game.round)
 
-        game.overview("reveal", p1, p2, game.round)
+        game.overview("reveal", p1, p2)
         winner = deduce_winner(p1, p2)
         if winner:
             game_end_message(winner)
@@ -411,7 +411,7 @@ def main():
         zcr_2 = p2.zero_card_rule()
         draw_1, draw_2 = full_draw_calc(p1.fields["draw"], p2.fields["draw"], zcr_1, zcr_2, game.round)
 
-        game.overview("calculations", p1, p2, game.round)
+        game.overview("calculations", p1, p2)
 
         input("\nclean_up")
         p1.clean_up(game.round)
@@ -425,7 +425,7 @@ def main():
         print(f"\n{p2.name} draws: {draw_2} card(s)")
         print(f"overdraw_counter: {overdraw_2}")
 
-        game.overview("round finished", p1, p2, game.round)
+        game.overview("round finished", p1, p2)
         input(f"\ncontinue for round: {game.round + 1}")
 
 
