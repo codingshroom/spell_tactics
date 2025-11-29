@@ -1,0 +1,61 @@
+
+how to use:
+
+	1. start the game by running python3 src/main.py in your terminal (make sure you have python installed)
+	2. after clicking enter you can see a gameboard. there you see some letters below Hand:Player. each of those refers to the cards mentioned below. 
+	3. pick a card by writing the letter and press enter to confirm. you can choose to Not play a card by writing 0. 
+	4. if you've chosen a valid card it will ask you for the mode in which to play the card: D for direct or C for charged. 
+		a) in this moment you can choose to enter B which brings you back into card selection
+	5. if you've correctly entered the mode to play you will get be given the next option to play. 
+	6. after going through the play phase you will see the reveal and the calculations. 
+	7. keep on playing until you or the bot wins. it will be tricky though ;)
+	8. you can always stop the program by pressing <ctrl> + <C>
+	9. enjoy!
+
+
+
+tables with card values:
+
+	N - Novice Spell:
+				attack		block		draw
+		direct		1		1		0
+		charged		2		2		1
+
+	A - Academy Spell:
+				attack		block		draw
+		direct		2		2		1
+		charged		4		3		2
+
+	P - Professor's Spell:
+				attack		block		draw
+		direct		3		3		2
+		charged		6		4		3
+
+	F - The Forbidden Spell:
+				attack		block		draw
+		direct		0		0		B
+		charged		4 LS		R		S
+
+
+	LS ... lifesteal: any unblocked damage will be gained as health
+	R ... reflects the damage back (including lifesteal) 
+	B ... blocks the draw of the opponent (the amount of cards your opponent would draw from their cards)
+	S ... steals the draw of the opponent (the amount of cards your opponent would draw from their cards)
+
+
+
+special interactions:
+
+	1. novice cannot be reflected by the forbidden spell (damage just goes through)
+	2. if forbidden spell and novice are being revealed in the same turn both on their respective draw fields the following happens:
+		- any effect of the forbidden spell is being ignored
+		- the player with the novice draws one more card
+	3. if the forbidden spell in charged mode is being reflected by the forbidden spell of your opponent: you will receive the damage from the forbidden spell (4) and your opponent will receive 	that much health
+
+
+
+zero-card-rule:
+
+	if a player has at the time of the reveal no cards in hand they will draw an extra card in the draw phase
+		- if the players health is below 4 they instead draw two cards
+
